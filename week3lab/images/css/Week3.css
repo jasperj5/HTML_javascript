@@ -1,0 +1,29 @@
+/*css goes here*/
+
+html,body{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #999999;
+    background-image:url("../images/background.png")
+}
+
+#main-container{
+    width: 980px;
+    padding: 18px;
+}
+
+.section{
+    width: 960px;
+    padding: 18px;
+    background color: #cccccc;
+    margin-top: 10px;
+    border-bottom: 3px solid black;
+}
+
+.title{
+    width: 960px;
+    padding: 5px;
+    padding-bottom: ;
+}

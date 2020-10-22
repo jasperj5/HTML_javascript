@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox Layout Demo</title>
+    <style>
+        /*CSS will go here*/
+        html,body{
+            height:100%;
+            display: flex;
+            justify-content: center;
+            background-image: url("images/background\ texture.jpg");
+            background-repeat: repeat;
+        }
+        #container{
+            width: 1000px;
+            /*height: 100%;*/
+            background-color: rgba(0, 255, 0, 0);
+            display: flex;
+            flex-direction: column;
+        }
+        #header{
+            background-color: tomato;
+            text-align: center;
+        }
+        #nav{
+            background-color: purple;
+            display: flex;
+            justify-content: center;
+        }
+        #content{
+            background-color: teal;
+            display: flex;
+        }
+        #footer{
+            background-color: yellow;
+            text-align: center;
+            line-height: 100pxs;
+        }
+        .btn:link{
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            margin: 20px 20px 20px 0;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            box-shadow: 6px 6px darkolivegreen;
+        }
+        .btn:visited{
+            color: black
+        }
+        .btn:hover{
+            background-color: darkgray;
+        }
+        .btn:active{
+            background-color: green;
+        }
+        .content-left{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            color: white
+        }
+        .content-right{
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Welcome to the Flexbox Div Page</h1></div>
+        
+        <div id="nav">
+            <a href="#" class="btn">Home</a>
+            <a href="#" class="btn">Bio</a>
+            <a href="#" class="btn">Images</a>
+            <a href="#" class="btn">Contact</a>
+        </div>
+        <div id="content">
+            <div class="content-left">
+                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ante in nibh mauris. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Quis varius quam quisque id. Mauris vitae ultricies leo integer malesuada nunc vel. Ultrices mi tempus imperdiet nulla malesuada pellentesque. Nunc eget lorem dolor sed viverra. Eget est lorem ipsum dolor. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Ipsum consequat nisl vel pretium lectus quam id leo in. Purus sit amet volutpat consequat mauris nunc congue nisi vitae. Nibh ipsum consequat nisl vel pretium lectus quam. Tortor consequat id porta nibh venenatis cras sed. Massa tincidunt dui ut ornare lectus sit amet est. Dictum at tempor commodo ullamcorper a lacus vestibulum sed. Scelerisque fermentum dui faucibus in ornare. Tellus in hac habitasse platea dictumst vestibulum rhoncus.</p>
+            </div>
+            <div class="content-right">Right content will be here
+                <img src="images/Ghost Yoshi.png" alt="Shadow"width="400">
+            </div>
+        </div>
+        <div id="footer">
+            &copy; 2020 Jasper Jafferian New England Institute of technology
+        </div>
+    </div>
+</body>
+</html>
