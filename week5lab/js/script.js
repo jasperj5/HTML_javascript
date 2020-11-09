@@ -10,6 +10,7 @@ var timer= requestAnimationFrame(draw);
 
 var x = 0;
 
+
 function draw(){
     timer= requestAnimationFrame(draw);
     ctx.clearRect(0,0, c.width, c.height);
