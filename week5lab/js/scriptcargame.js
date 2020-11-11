@@ -14,7 +14,7 @@ var start = 105;
 var finish = 700;
 
 //fuel values
-var startFuel = randomRange(600, );
+var startFuel = randomRange(600,100);
 var fuel = startFuel
 //checks to see when we run out of fuel or pass finish line
 
