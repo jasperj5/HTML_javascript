@@ -3,6 +3,7 @@
 html,body{
     height: 100%;
     margin: 0;
+    background-color: red;
 }
 
 body{
@@ -18,14 +19,14 @@ body{
 }
 
 header{
-    background-color:red;
+    background-color:white;
     margin-bottom: 10px;
     text-align: center;
 
 }
 
 nav{
-    background-color:red;
+    background-color:white;
     margin-bottom: 10px;
 }
 main{
@@ -35,6 +36,6 @@ main{
 
 canvas{
     border: 1px solid black;
-    background-color: black;
+    background-image: "images/Finnal_Draft_Logo.jpg";
     margin-bottom: 10px;
 }

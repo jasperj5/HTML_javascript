@@ -1,0 +1,34 @@
+html,body{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    border: 3px solid black;
+    padding: 7px;
+    width: 1010px;
+}
+
+canvas{
+    border: 1px solid black;
+    background-color: violet;
+}
+a:link,a:visited{
+    background-color: yellow;
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+a:hover{
+    background-color: grey;
+    color: white;
+}
