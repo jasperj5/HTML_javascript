@@ -94,7 +94,7 @@ function main(){
     else{
         ship.vx = 0;
     }
-    else if(ship.right === true){
+    if(ship.right === true){
         ship.vx = 1;
     }
     else{
