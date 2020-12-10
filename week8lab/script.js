@@ -6,6 +6,10 @@ var asteroids = new Array();
 var numAsteroids = 10;
 var gameOver = false
 var score = 0
+var gameStates = [];
+var currentState = 0;
+var ship;
+
 
 function randomRange(high, low) {
     return Math.random() * (high - low) + low;
@@ -49,6 +53,7 @@ function PlayerShip() {
     this.left = false;
     this.right = false;
     this.flamelength = 30
+    
 
 
     this.draw = function () {
@@ -138,9 +143,15 @@ function keyPressDown(e) {
     }
 
 }
+if(e.keyCode === 13){
+    gameOver = false;
+
+    if
+}
 
 function keyPressUp(e) {
-    console.log("Key up" + e.keyCode)
+    //console.log("Key up" + e.keyCode)
+    if(gameOver == false)
     if (e.keyCode === 38) {
         ship.up = false;
     }
@@ -161,10 +172,78 @@ function keyPressUp(e) {
     }
 }
 
+//game states for menus and gameplay
+
+gameStates[0] = function(){
+    context.save();
+    context.font = "30px Arial"
+    context.fillStyle = "white"
+    context.textAlign = "center"
+    context.fillText("Press Enter to Start", c.width/2, c.height/2 - 30)
+}
+gameStates[1] = function(){
+
+}
+ context.save();
+    context.font = "15px Arial"
+    context.fillStyle = "white"
+    context.fillText("Score: " + score.toString(), c.width - 150, 30)
+    context.restore();
+
+    //ship.vy += gravity;
+
+    if (ship.up === true) {
+        ship.vy = -3;
+    }
+    else{
+        ship.vy = 3;
+    }
+    if (ship.left === true) {
+        ship.vx = -3;
+    }
+    else if (ship.right === true) {
+        ship.vx = 3;
+    }
+    else {
+        ship.vx = 0;
+    }
+    for (var i = 0; i < asteroids.length; i++) {
+        var dX = ship.x - asteroids[i].x;
+        var dY = ship.y - asteroids[i].y;
+        var dist = Math.sqrt((dX*dX)+(dY*dY));
+
+        if(detectCollision(dist, (ship.h/2 + asteroids[i].radius))){
+            //console.log("we collided with Asteroid" + i)
+            gameOver = true;
+            //document.removeEventListener('keydown', keyPressDown);
+            //document.removeEventListener('keyup', keyPressUp);
+        }
+        if(asteroids[i].y > c.height + asteroids[i].radius){
+            asteroids[i].y = randomRange(c.height - asteroids[i].radius, 0 + asteroids[i].radius)-c.height;
+            asteroids[i].y = randomRange(c.width - asteroids[i].radius, 0 + asteroids[i].radius)-c.height;
+
+        }
+        if(gameOver == false){
+            asteroids[i].y += asteroids[i].vy;
+        }
+        asteroids[i].draw();
+    }
+    ship.draw();
+    if(gameOver == false){
+        ship.move();
+    }
+
+    while(asteroids.length < numAsteroids){
+        asteroids.push(new Asteriods)
+    }
+}
+
+gameStates[2] = function
+    
 
 function main() {
     context.clearRect(0, 0, c.width, c.height);
-
+/*
     context.save();
     context.font = "15px Arial"
     context.fillStyle = "white"
@@ -214,12 +293,21 @@ function main() {
         ship.move();
     }
 
+    while(asteroids.length < numAsteroids){
+        asteroids.push(new Asteriods)
+    }
     timer = requestAnimationFrame(main);
+*/
+timer = requestAnimationFrame(main);
 }
+
+
+
 
 function scoreTimer(){
     if(gameOver == false){
         score++;
+        if(score += 0)
         setTimeout(scoreTimer,1000)
     }
 
