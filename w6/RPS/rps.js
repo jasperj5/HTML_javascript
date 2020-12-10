@@ -43,7 +43,7 @@ function play(playersChoice){
                 ctx.fillText("Cpu chooses Paper, Ha Ha you lose", c.width / 2, c.height / 2)
             }
             else{
-                ctx.fillText("Cpu chooses Scissors You Win!", c.width / 2, c.height / 2)
+                ctx.fillText("Cpu chooses Scissors, Congrates You Win!", c.width / 2, c.height / 2)
             }
         break;
         case 1:
@@ -64,10 +64,10 @@ function play(playersChoice){
                 ctx.fillText("Computer choose Scissors, You Tied", c.width / 2, c.height / 2)
             }  
             else if(cpuChoice === 0){
-                ctx.fillText("Cpu chooses Rock, you lose", c.width / 2, c.height / 2)
+                ctx.fillText("Cpu chooses Rock, Ha Ha you lose", c.width / 2, c.height / 2)
             }
             else{
-                ctx.fillText("Cpu chooses Paper You Win!", c.width / 2, c.height / 2)
+                ctx.fillText("Cpu chooses Paper, Congrates You Win!", c.width / 2, c.height / 2)
             }
         break;
     }

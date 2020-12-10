@@ -104,17 +104,18 @@ function drawSprite() {
 
 function drawStartline() {
     ctx.fillStyle = 'orange';
-    ctx.fillRect(start, 100, 10, 400);
+    ctx.fillRect(start, 58, 10, 400);
 
 }
 function drawfinishline() {
     ctx.fillStyle = 'pink'
-    ctx.fillRect(finish, 100, 10, 400);
+    ctx.fillRect(finish, 956, 10, 400);
 }
 function drawFuelbar() {
     var currentBarwidth = barfuelwidth * getfuelpercent();
     ctx.fillStyle = 'yellow'
-    ctx.fillRect(start, 75, currentBarwidth, 20);
+    ctx.backGroundimg
+    ctx.fillRect(start, 75, currentBarwidth, "512px");
 }
 function drawfueltext() {
     ctx.fillStyle = 'white';
